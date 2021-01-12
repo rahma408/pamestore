@@ -1,0 +1,67 @@
+﻿<Window x:Class="pamelstore.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:pamelstore"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="516.4" Width="785.6">
+    <Grid Margin="0,0,0,-51" HorizontalAlignment="Left" Width="790">
+        <Label Content="Keranjang Belanja" HorizontalAlignment="Left" Margin="20,51,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,-0.384" FontWeight="Bold"/>
+        <Rectangle HorizontalAlignment="Left" Height="445" Margin="12,25,0,0" Stroke="Black" VerticalAlignment="Top" Width="391"/>
+        <ListBox x:Name="listKeranjangBelanja" HorizontalAlignment="Left" Height="330" VerticalAlignment="Top" Width="362" Margin="27,124,0,0" MouseDoubleClick="onlistKeranjangBelanjaDoubleClicked">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="281" />
+                            <ColumnDefinition Width="81" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Text="{Binding item}" TextAlignment="Left" FontSize="16"/>
+                        <TextBlock Grid.Row="1" Text="{Binding price}"  TextAlignment="Right" FontSize="16"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <ListBox HorizontalAlignment="Left" Height="29" VerticalAlignment="Top" Width="362" Margin="27,82,0,0">
+            <Grid Margin="0,2">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150"/>
+                    <ColumnDefinition Width="150"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="Item" TextAlignment="Center"/>
+                <TextBlock Grid.Column="1" Text="Price" TextAlignment="Center"/>
+
+            </Grid>
+        </ListBox>
+        <Label Content="SubTotal" HorizontalAlignment="Left" Margin="422,336,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold" Width="77"/>
+        <Label Content="Promo" HorizontalAlignment="Left" Margin="422,387,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold" Width="60"/>
+        <Label Content="Total" HorizontalAlignment="Left" Margin="425,431,0,0" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.89,0.279" Height="39" FontWeight="Bold"/>
+        <Label Content="75000" HorizontalAlignment="Left" Margin="695,336,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold"/>
+        <Label Content="15000" HorizontalAlignment="Left" Margin="695,387,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold"/>
+        <Label Content="90000" HorizontalAlignment="Left" Margin="695,431,0,0" VerticalAlignment="Top" Height="39" FontWeight="Bold" RenderTransformOrigin="-1.301,0.605"/>
+        <Rectangle HorizontalAlignment="Left" Height="327" Margin="422,143,0,0" Stroke="Black" VerticalAlignment="Top" Width="349"/>
+        <Button Content="Daftar Menu" HorizontalAlignment="Left" Height="52" Margin="456,76,0,0" VerticalAlignment="Top" Width="236" Click="onDaftarMenuClicked" FontWeight="Bold" FontSize="20"/>
+        <Label Content="Promo" HorizontalAlignment="Left" Margin="434,178,0,0" VerticalAlignment="Top" FontWeight="Bold" Height="40"/>
+        <Button x:Name="btnGantiPromo" Content="tambah" HorizontalAlignment="Left" Height="37" Margin="668,232,0,0" VerticalAlignment="Top" Width="85" Click="onBtnGantiPromoClicked"/>
+        <Separator HorizontalAlignment="Left" Height="3" Margin="27,116,0,0" VerticalAlignment="Top" Width="361"/>
+        <ListBox x:Name="listBoxPromo" HorizontalAlignment="Left" Height="37" Margin="434,234,0,0" VerticalAlignment="Top" Width="229">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="0,2">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="161" />
+
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Text="{Binding diskon}" TextAlignment="Left"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Label x:Name="label" Content="Tempat Pemesanan pamelstore" HorizontalAlignment="Left" Margin="425,39,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+
+
+    </Grid>
+</Window>
+
