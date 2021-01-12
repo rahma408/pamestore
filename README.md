@@ -1,4 +1,4 @@
-# pamelstore
+# pamelstore (rahma pamela 19.11.2829)
 ## Description
 Program pamelstore ini bertujuan menambahkan item ke sebuah keranjang digital Yang kebutuhan Fungsionalnya :
 
@@ -162,4 +162,3 @@ class KeranjangBelanja
     
     
 '''
-rahma pamela (19.11.2829)
