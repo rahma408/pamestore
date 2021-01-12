@@ -21,19 +21,21 @@ Penambahan messagebox pada saat menghapus
 
 
 
-class Payment { OnPaymentChangedListener paymentListener; public Payment(OnPaymentChangedListener paymentListener) {
+ {
+        private double deliveryFee = 0;
+        private double promo = 0;
+        private double balance = 0;
+        private OnPaymentChangedListener paymentCallback;
 
-        this.paymentListener = paymentListener;
-    }
+        public Payment(OnPaymentChangedListener paymentCallback)
+        {
+            this.paymentCallback = paymentCallback;
+        }
 
-    public void updateTotal(double subTotal, double promo)
-    {
-
-        double total = subTotal - promo;
-        this.paymentListener.onPriceUpdated(subTotal, total, promo);
-
-    }
-}
+        public void setBalance(double balance)
+        {
+            this.balance = balance;
+        }
 
 
 '''
